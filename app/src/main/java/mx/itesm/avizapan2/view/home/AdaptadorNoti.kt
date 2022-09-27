@@ -38,22 +38,24 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             val hora = vistaCaja.findViewById<TextView>(R.id.tvHora)
             //val btnInfo = vistaCaja.findViewById<Button>(R.id.btnMasInfo)
             val imgNoti = vistaCaja.findViewById<ImageView>(R.id.imgNoti)
+            val categoria = notificacion.categoriaNoti
 
             // Obtener fecha y hora del mismo parámetro
             val fechaCompleta = notificacion.publicado
-            //val fechaSplit = fechaCompleta.split('T')
-            //val horaSplit = fechaSplit[1].split('.')
+            val fechaSplit = fechaCompleta.split('T')
+            val horaSplit = fechaSplit[1].split('.')
+
 
             // Set values
             tvTituloNoti.text = notificacion.tituloNoti
-            println(tvTituloNoti)
             tvsubtituloNoti.text = notificacion.descripcionNoti
-            println(tvsubtituloNoti)
-            fecha.text = fechaCompleta
-            //println(fechaSplit[1])
-            hora.text = fechaCompleta
-            //println(horaSplit[1])
-            imgNoti.setImageResource(R.drawable.defaultbackground)
+            fecha.text = fechaSplit[0]
+            hora.text = horaSplit[0]
+            if(categoria.getValue(1) == "vialidad")
+                imgNoti.setImageResource(R.drawable.vialidad)
+            else
+                imgNoti.setImageResource(R.drawable.defaultbackground)
+
 
             // Descargar la bandera desde el url y ponerla en imgBandera
             //val url = (pais.info["flag"])

@@ -66,7 +66,7 @@ class HomeFragment : Fragment() {
                                 "Descripción...",
                                   0,
                                    "2022-09-15T17:05:21.000Z",
-                                 "Categoría",
+                                 mutableMapOf(1 to "vialidad"),
                                      "")
         )
 

@@ -14,7 +14,7 @@ data class Notificacion(
     @SerializedName("posted")
     val publicado: String="2022-09-15T17:05:21.000Z",
     @SerializedName("category")
-    val categoriaNoti: String="",
+    val categoriaNoti: Map<Int, String>,
     // temporal, después hay que implementar un mapa
     val imgNoti: String=""
 )
