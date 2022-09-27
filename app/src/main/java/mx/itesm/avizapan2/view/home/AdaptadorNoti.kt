@@ -46,7 +46,7 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             val horaSplit = fechaSplit[1].split('.')
 
 
-            // Set values
+            // Set values de todo
             tvTituloNoti.text = notificacion.tituloNoti
             tvsubtituloNoti.text = notificacion.descripcionNoti
             fecha.text = fechaSplit[0]
