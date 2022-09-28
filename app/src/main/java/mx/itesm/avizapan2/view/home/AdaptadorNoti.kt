@@ -37,7 +37,11 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             val fecha = vistaCaja.findViewById<TextView>(R.id.tvFecha)
             val hora = vistaCaja.findViewById<TextView>(R.id.tvHora)
             val imgNoti = vistaCaja.findViewById<ImageView>(R.id.imgNoti)
+
+            // Valores que no desplegamos en la interfaz
             val categoria = notificacion.categoriaNoti
+            val id = notificacion.idNoti
+
 
             // Obtener fecha y hora del mismo parámetro
             val fechaCompleta = notificacion.publicado
@@ -50,8 +54,14 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             tvsubtituloNoti.text = notificacion.descripcionNoti
             fecha.text = fechaSplit[0]
             hora.text = horaSplit[0]
-            if(categoria.getValue(1) == "vialidad")
+            if(categoria == 1.0) // vialidad
                 imgNoti.setImageResource(R.drawable.vialidad)
+            else if(categoria == 2.0) // climatológica
+                imgNoti.setImageResource(R.drawable.climatologica)
+            else if(categoria == 5.0) // sismológica
+                imgNoti.setImageResource(R.drawable.sismologica)
+            else if(categoria == 6.0) // protección civil
+                imgNoti.setImageResource(R.drawable.proteccion_civil)
             else
                 imgNoti.setImageResource(R.drawable.defaultbackground)
 
@@ -63,6 +73,9 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             //Glide.with(renglonPais.context) // mandamos la vista pq todas las vistas pueden preguntar su contexto
                 //.load(url)
                 //.into(imgBandera)
+
+            // sismologica
+            // proteccion civil
         }
 
     }

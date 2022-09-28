@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Colores Avizapan -->
+    <color name="rosa1">#F395AF</color>
+    <color name="rosa2">#FFd76685</color>
+    <color name="morado1">#B095DD</color>
+    <color name="morado2">#FF644b8d</color>
+    <color name="azul_avizapan">#FF18aeff</color>
 </resources>

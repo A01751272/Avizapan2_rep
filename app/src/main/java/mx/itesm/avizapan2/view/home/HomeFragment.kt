@@ -61,13 +61,21 @@ class HomeFragment : Fragment() {
     private fun configurarRV() {
         val arrNotis = arrayOf(
             Notificacion(
-                                      1,
-                                    "Título",
-                                "Descripción...",
-                                  0,
-                                   "2022-09-15T17:05:21.000Z",
-                                 mutableMapOf(1 to "vialidad"),
-                                     "")
+                1.0,
+                "Título1",
+                "Descripción1",
+                0.0,
+                "2022-09-27T10:25:03.000Z",
+                1.0
+            ),
+            Notificacion(
+                2.0,
+                "Título2",
+                "Descripción2",
+                0.0,
+                "2022-09-27T10:25:03.000Z",
+                1.0
+            )
         )
 
         val layoutRV = LinearLayoutManager(requireContext())

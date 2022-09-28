@@ -3,18 +3,18 @@ package mx.itesm.avizapan2.view.home
 import com.google.gson.annotations.SerializedName
 
 data class Notificacion(
-    @SerializedName("id")
-    val idNoti: Int,
-    @SerializedName("title")
+    @SerializedName("notification_id")
+    val idNoti: Double,
+    @SerializedName("notification_title")
     val tituloNoti: String="",
-    @SerializedName("description")
+    @SerializedName("notification_description")
     val descripcionNoti: String="",
-    @SerializedName("location")
-    val ubicacionZC: Int=0,
-    @SerializedName("posted")
+    @SerializedName("notification_location")
+    val ubicacionZC: Double=0.0,
+    @SerializedName("notification_posted")
     val publicado: String="2022-09-15T17:05:21.000Z",
-    @SerializedName("category")
-    val categoriaNoti: Map<Int, String>,
-    // temporal, después hay que implementar un mapa
-    val imgNoti: String=""
+    @SerializedName("notification_categoryId")
+    val categoriaNoti: Double=0.0,
+    //val categoriaNoti: Map<Double, String>,
+    // val imgNoti: String=""
 )
