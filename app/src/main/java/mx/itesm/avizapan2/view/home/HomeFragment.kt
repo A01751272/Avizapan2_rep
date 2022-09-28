@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.avizapan2.databinding.FragmentHomeBinding
@@ -50,6 +52,11 @@ class HomeFragment : Fragment() {
         configurarObservables()
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        registrarEventos()
+    }
+
     private fun configurarObservables() {
         homeViewModel.listaNotificaciones.observe(this) { lista ->
             val arrNotis = lista.toTypedArray()
@@ -87,6 +94,14 @@ class HomeFragment : Fragment() {
         // Separador entre cajas
         val separador = DividerItemDecoration(requireContext(), layoutRV.orientation)
         binding.rvNotis.addItemDecoration(separador)
+    }
+
+    private fun registrarEventos() {
+        binding.btnFiltrar.setOnClickListener { vista ->
+            // Selección del usuario
+            val category = binding.spinnerFiltros.selectedItem.toString()
+            homeViewModel.filtrarNotisActivas(category)
+        }
     }
 
     override fun onDestroyView() {

@@ -8,9 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <!-- Colores Avizapan -->
-    <color name="rosa1">#F395AF</color>
-    <color name="rosa2">#FFd76685</color>
-    <color name="morado1">#B095DD</color>
-    <color name="morado2">#FF644b8d</color>
-    <color name="azul_avizapan">#FF18aeff</color>
+    <color name="primaryColor">#d76685</color>
+    <color name="primaryLightColor">#ff97b5</color>
+    <color name="primaryDarkColor">#a23658</color>
+    <color name="secondaryColor">#644b8d</color>
+    <color name="secondaryLightColor">#9377bd</color>
+    <color name="secondaryDarkColor">#37225f</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
 </resources>

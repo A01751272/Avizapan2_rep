@@ -50,4 +50,40 @@ class HomeViewModel : ViewModel() {
             }
         })
     }
+
+    fun filtrarNotisActivas(category: String){
+        var categoryDouble = 0.0
+        // sacarvalor de spinner, pasarlo a double y mandarlo a las funciones
+        if (category == "Mostrar todo") {
+            categoryDouble = 0.0
+        }
+        else if (category == "Vialidad") {
+            categoryDouble = 1.0
+        }
+        else if (category == "Clima") {
+            categoryDouble = 2.0
+        }
+        else if (category == "Sismos") {
+            categoryDouble = 5.0
+        }
+        else {
+            categoryDouble = 6.0
+        }
+        val call = avizapanAPI.filtrarNotisActivas(categoryDouble.toString())
+        call.enqueue(object: Callback<List<Notificacion>> {
+            override fun onResponse(call: Call<List<Notificacion>>,
+                                    response: Response<List<Notificacion>>) {
+                if (response.isSuccessful) {
+                    println("Lista de notificaciones: ${response.body()}")
+                    // Avisar a la vista (adaptador) que hay datos nuevos
+                    listaNotificaciones.value = response.body()
+                } else {
+                    println("Error en los datos: ${response.message()}")
+                }
+            }
+            override fun onFailure(call: Call<List<Notificacion>>, t: Throwable) {
+                println("Error en la descarga: ${t.localizedMessage}")
+            }
+        })
+    }
 }
