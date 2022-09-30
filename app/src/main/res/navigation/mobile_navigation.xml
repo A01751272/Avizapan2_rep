@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="mx.itesm.avizapan2.view.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_masInfoFrag"
+            app:destination="@id/masInfoFrag" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +26,13 @@
         android:name="mx.itesm.avizapan2.view.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/masInfoFrag"
+        android:name="mx.itesm.avizapan2.view.home.MasInfoFrag"
+        android:label="fragment_mas_info"
+        tools:layout="@layout/fragment_mas_info" >
+        <argument
+            android:name="notificacion"
+            app:argType="mx.itesm.avizapan2.view.home.Notificacion" />
+    </fragment>
 </navigation>

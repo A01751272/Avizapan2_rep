@@ -7,11 +7,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.imageview.ShapeableImageView
 import mx.itesm.avizapan2.R
 
 class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notificacion>)
     :  RecyclerView.Adapter<AdaptadorNoti.CajaNoti>()
 {
+
+    // Variable de instancia ListenerRecycler
+    var listener: ListenerRecycler? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CajaNoti {
         val vista = LayoutInflater.from(contexto).inflate(
@@ -23,6 +27,9 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
     override fun onBindViewHolder(holder: CajaNoti, position: Int) {
         val notificacion = arrNotis[position]
         holder.set(notificacion)
+        holder.vistaCaja.setOnClickListener{
+            listener?.itemClicked(position)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -36,11 +43,10 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             val tvsubtituloNoti = vistaCaja.findViewById<TextView>(R.id.tvSubtituloNoti)
             val fecha = vistaCaja.findViewById<TextView>(R.id.tvFecha)
             val hora = vistaCaja.findViewById<TextView>(R.id.tvHora)
-            val imgNoti = vistaCaja.findViewById<ImageView>(R.id.imgNoti)
+            val imgNoti = vistaCaja.findViewById<ShapeableImageView>(R.id.imgNoti)
 
             // Valores que no desplegamos en la interfaz
             val categoria = notificacion.categoriaNoti
-            val id = notificacion.idNoti
 
 
             // Obtener fecha y hora del mismo parámetro

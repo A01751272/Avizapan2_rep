@@ -19,7 +19,7 @@ class HomeViewModel : ViewModel() {
     // Descargar datos del API desde una URL
     private val retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl("https://avizapan-app-p6qc5.ondigitalocean.app/")
+            .baseUrl("https://avizapan-app-3s4eu.ondigitalocean.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -53,9 +53,10 @@ class HomeViewModel : ViewModel() {
 
     fun filtrarNotisActivas(category: String){
         var categoryDouble = 0.0
-        // sacarvalor de spinner, pasarlo a double y mandarlo a las funciones
+        // sacar valor de spinner, pasarlo a double y mandarlo a las funciones
         if (category == "Mostrar todo") {
-            categoryDouble = 0.0
+            descargarNotisActivas()
+            return
         }
         else if (category == "Vialidad") {
             categoryDouble = 1.0

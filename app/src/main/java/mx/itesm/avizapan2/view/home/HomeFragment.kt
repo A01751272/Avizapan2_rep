@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.avizapan2.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), ListenerRecycler {
 
     // Binding
     private var _binding: FragmentHomeBinding? = null
@@ -44,6 +44,7 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        // Action Bar
         // ViewModel
         homeViewModel.descargarNotisActivas()
         // RecyclerView
@@ -94,14 +95,26 @@ class HomeFragment : Fragment() {
         // Separador entre cajas
         val separador = DividerItemDecoration(requireContext(), layoutRV.orientation)
         binding.rvNotis.addItemDecoration(separador)
+
+        // Asigna el listener al adaptador
+        adaptador.listener = this
     }
 
     private fun registrarEventos() {
-        binding.btnFiltrar.setOnClickListener { vista ->
+        binding.btnFiltrar.setOnClickListener {
             // Selección del usuario
             val category = binding.spinnerFiltros.selectedItem.toString()
             homeViewModel.filtrarNotisActivas(category)
         }
+    }
+
+    // Dar click en caja de notificaciones para mostrar + info
+    override fun itemClicked(position: Int){
+        val nombreNotificacion = adaptador.arrNotis[position]
+        // println("Click en $nombreNotificacion")
+        // TODO: pasar argumentos desde home hasta mas info
+        val accion = HomeFragmentDirections.actionNavigationHomeToMasInfoFrag(nombreNotificacion)
+        findNavController().navigate(accion)
     }
 
     override fun onDestroyView() {

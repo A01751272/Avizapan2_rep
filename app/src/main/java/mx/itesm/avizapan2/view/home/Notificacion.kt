@@ -1,6 +1,7 @@
 package mx.itesm.avizapan2.view.home
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Notificacion(
     @SerializedName("notification_id")
@@ -15,6 +16,4 @@ data class Notificacion(
     val publicado: String="2022-09-15T17:05:21.000Z",
     @SerializedName("notification_categoryId")
     val categoriaNoti: Double=0.0,
-    //val categoriaNoti: Map<Double, String>,
-    // val imgNoti: String=""
-)
+) : Serializable

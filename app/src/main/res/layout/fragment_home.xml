@@ -24,7 +24,7 @@
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:entries="@array/arrCategoria"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -33,10 +33,12 @@
 
         <ImageButton
             android:id="@+id/btnFiltrar"
-            android:layout_width="48dp"
+            android:layout_width="0dp"
             android:layout_height="48dp"
+            android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="?android:attr/actionModeWebSearchDrawable" />
+            android:src="?android:attr/actionModeWebSearchDrawable"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
