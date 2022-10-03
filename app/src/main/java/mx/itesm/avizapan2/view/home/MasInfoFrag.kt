@@ -15,7 +15,7 @@ import mx.itesm.avizapan2.databinding.FragmentMasInfoBinding
 class MasInfoFrag : Fragment() {
 
     //Mapa
-    
+
 
     // binding
     private lateinit var binding : FragmentMasInfoBinding
@@ -51,5 +51,6 @@ class MasInfoFrag : Fragment() {
         binding.tvHoraMasInfo.text = horaSplit[0]
         binding.tvDescripcionMasInfo.text = descripcion
     }
+
 
 }

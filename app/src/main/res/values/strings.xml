@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Avizapan2</string>
-    <string name="title_home">Inicio</string>
+    <string name="title_home">Notificaciones</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Ayuda</string>
+    <string name="title_notifications">Contactos</string>
+    <string name="title_mas_info">Noticia</string>
 
     <string-array name="arrCategoria">
         <item>Mostrar todo</item>
