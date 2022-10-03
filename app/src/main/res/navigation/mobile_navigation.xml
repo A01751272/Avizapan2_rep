@@ -35,4 +35,9 @@
             android:name="notificacion"
             app:argType="mx.itesm.avizapan2.view.home.Notificacion" />
     </fragment>
+    <fragment
+        android:id="@+id/mapa"
+        android:name="mx.itesm.avizapan2.Mapa"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa" />
 </navigation>

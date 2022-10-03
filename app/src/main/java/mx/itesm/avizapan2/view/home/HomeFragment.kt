@@ -71,7 +71,9 @@ class HomeFragment : Fragment(), ListenerRecycler {
             Notificacion(
                 1.0,
                 "Título1",
-                "Descripción1",
+                "Humanity has never had more data about more facets of society than it does today. Computers are great for storing data sets, but those data sets have little value to society until they are analyzed by human beings. Computational techniques can guide humans on the road to deriving meaning from a data set.\n" +
+                        "\n" +
+                        "Clustering is a computational technique that divides the points in a data set into groups. A successful clustering results in groups that contain points that are related to one another. Whether those relationships are meaningful generally requires human verification.",
                 0.0,
                 "2022-09-27T10:25:03.000Z",
                 1.0
