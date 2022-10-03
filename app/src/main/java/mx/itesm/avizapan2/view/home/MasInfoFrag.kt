@@ -13,10 +13,6 @@ import mx.itesm.avizapan2.databinding.FragmentMasInfoBinding
 
 class MasInfoFrag : Fragment() {
 
-    companion object {
-        fun newInstance() = MasInfoFrag()
-    }
-
     // binding
     private lateinit var binding : FragmentMasInfoBinding
 
@@ -29,7 +25,7 @@ class MasInfoFrag : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMasInfoBinding.inflate(layoutInflater)
         return binding.root
     }

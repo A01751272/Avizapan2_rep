@@ -22,5 +22,19 @@
     <color name="verde1">#77AA94</color>
     <color name="verde1_dark">#497b66</color>
     <!--  Colores Logo 2  -->
+    <color name="rosa2_light">#ff789c</color>
+    <color name="rosa2">#EF426E</color>
+    <color name="rosa2_dark">#b70043</color>
+    <color name="amarillo2">#F1D80F</color>
+    <color name="azul2_light">#8df9ff</color>
+    <color name="azul2">#57C6CF</color>
+    <color name="azul2_dark">#0c959e</color>
+    <color name="azul2_darker">#006770</color>
+    <color name="verde2light">#e6ffb3</color>
+    <color name="verde2">#B3D783</color>
+    <color name="verde2_dark">#82a555</color>
+    <color name="naranja2_light">#ffcd88</color>
+    <color name="naranja2">#f09c59</color>
+    <color name="naranja2_dark">#ba6d2c</color>
 
 </resources>

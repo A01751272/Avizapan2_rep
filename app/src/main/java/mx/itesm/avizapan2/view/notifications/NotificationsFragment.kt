@@ -69,11 +69,11 @@ class NotificationsFragment : Fragment() {
             NumerosEmergencia(
                 "Incendios Forestales",
                 "5554 0612 / 01 800 00 77 100"
+            ),
+            NumerosEmergencia(
+                "Comisión de Derechos Humanos",
+                "5299 5600"
             )
-//            NumerosEmergencia(
-//                "Comisión de Derechos Humanos",
-//                "5299 5600"
-//            )
         )
 
         // Layout
