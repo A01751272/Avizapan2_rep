@@ -1,12 +1,11 @@
 package mx.itesm.avizapan2.view.home
 
-import android.support.v4.media.session.MediaSessionCompat
 import retrofit2.Call
-import retrofit2.Response
-import retrofit2.http.Body
+import retrofit2.http.FieldMap
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
+
 
 interface AvizapanAPI
 {
@@ -16,7 +15,7 @@ interface AvizapanAPI
     @GET("notifications/category/{category}")
     fun filtrarNotisActivas(@Path("category") category: String): Call<List<Notificacion>>
 
-    @POST("tokens")
-    fun subirToken(@Body token: String): Call<Response<String>>
+    @POST("token")
+    fun subirToken(@FieldMap data: HashMap<String, String>): Call<HashMap<String, String>>
     //fun subirToken(@Body token: String): Call<String>
 }
