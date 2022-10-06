@@ -15,7 +15,7 @@ interface AvizapanAPI
     @GET("notifications/category/{category}")
     fun filtrarNotisActivas(@Path("category") category: String): Call<List<Notificacion>>
 
-    @POST("token")
+    @POST("tokens")
     fun subirToken(@FieldMap data: HashMap<String, String>): Call<HashMap<String, String>>
     //fun subirToken(@Body token: String): Call<String>
 }
