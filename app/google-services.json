@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "48975807952",
+    "project_id": "avizapan2notis",
+    "storage_bucket": "avizapan2notis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48975807952:android:32d627d6f2806c64b125d5",
+        "android_client_info": {
+          "package_name": "mx.itesm.avizapan2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48975807952-pio5u0n0vdd4fcvb4ipcmafjaei8iigs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQMFYp6WjEE6TyvQnezYhX0uoj0BH2DFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48975807952-pio5u0n0vdd4fcvb4ipcmafjaei8iigs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

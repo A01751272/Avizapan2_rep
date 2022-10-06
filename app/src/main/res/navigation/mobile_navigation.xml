@@ -29,10 +29,15 @@
     <fragment
         android:id="@+id/masInfoFrag"
         android:name="mx.itesm.avizapan2.view.home.MasInfoFrag"
-        android:label="fragment_mas_info"
-        tools:layout="@layout/fragment_mas_info" >
+        android:label="@string/title_mas_info"
+        tools:layout="@layout/fragment_mas_info">
         <argument
             android:name="notificacion"
             app:argType="mx.itesm.avizapan2.view.home.Notificacion" />
     </fragment>
+    <fragment
+        android:id="@+id/mapa"
+        android:name="mx.itesm.avizapan2.Mapa"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa" />
 </navigation>

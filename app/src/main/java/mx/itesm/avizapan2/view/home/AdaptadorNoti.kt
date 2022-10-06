@@ -40,7 +40,7 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
     {
         fun set(notificacion: Notificacion) {
             val tvTituloNoti = vistaCaja.findViewById<TextView>(R.id.tvTituloNoti)
-            val tvsubtituloNoti = vistaCaja.findViewById<TextView>(R.id.tvSubtituloNoti)
+            //val tvsubtituloNoti = vistaCaja.findViewById<TextView>(R.id.tvSubtituloNoti)
             val fecha = vistaCaja.findViewById<TextView>(R.id.tvFecha)
             val hora = vistaCaja.findViewById<TextView>(R.id.tvHora)
             val imgNoti = vistaCaja.findViewById<ShapeableImageView>(R.id.imgNoti)
@@ -57,7 +57,7 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
 
             // Set values de todo
             tvTituloNoti.text = notificacion.tituloNoti
-            tvsubtituloNoti.text = notificacion.descripcionNoti
+            //tvsubtituloNoti.text = notificacion.descripcionNoti
             fecha.text = fechaSplit[0]
             hora.text = horaSplit[0]
             if(categoria == 1.0) // vialidad

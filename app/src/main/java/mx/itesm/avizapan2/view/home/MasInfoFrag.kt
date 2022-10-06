@@ -8,10 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import com.google.android.gms.maps.SupportMapFragment
 import mx.itesm.avizapan2.R
 import mx.itesm.avizapan2.databinding.FragmentMasInfoBinding
 
 class MasInfoFrag : Fragment() {
+
+    //Mapa
+
 
     // binding
     private lateinit var binding : FragmentMasInfoBinding
@@ -47,5 +51,14 @@ class MasInfoFrag : Fragment() {
         binding.tvHoraMasInfo.text = horaSplit[0]
         binding.tvDescripcionMasInfo.text = descripcion
     }
+
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.fragment_mapa)
+//
+//        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
+//        mapFragment?.getMapAsync(this)
+//    }
+
 
 }
