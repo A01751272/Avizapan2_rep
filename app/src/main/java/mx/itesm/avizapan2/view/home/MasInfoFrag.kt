@@ -52,5 +52,13 @@ class MasInfoFrag : Fragment() {
         binding.tvDescripcionMasInfo.text = descripcion
     }
 
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.fragment_mapa)
+//
+//        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
+//        mapFragment?.getMapAsync(this)
+//    }
+
 
 }

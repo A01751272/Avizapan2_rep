@@ -14,7 +14,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/defaultbackground" />
+        app:srcCompat="@drawable/icono_transparente" />
 
     <TextView
         android:id="@+id/tvTituloAlerta"
