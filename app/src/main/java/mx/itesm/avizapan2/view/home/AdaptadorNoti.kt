@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
@@ -43,7 +42,7 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             //val tvsubtituloNoti = vistaCaja.findViewById<TextView>(R.id.tvSubtituloNoti)
             val fecha = vistaCaja.findViewById<TextView>(R.id.tvFecha)
             val hora = vistaCaja.findViewById<TextView>(R.id.tvHora)
-            val imgNoti = vistaCaja.findViewById<ShapeableImageView>(R.id.imgNoti)
+            val imgNoti = vistaCaja.findViewById<ShapeableImageView>(R.id.imgNumero)
 
             // Valores que no desplegamos en la interfaz
             val categoria = notificacion.categoriaNoti
@@ -72,16 +71,6 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             else
                 imgNoti.setImageResource(R.drawable.defaultbackground)
 
-//            if(categoria == 1.0) // vialidad
-//                imgNoti.setImageResource(R.drawable.vialidad)
-//            else if(categoria == 2.0) // climatológica
-//                imgNoti.setImageResource(R.drawable.climatologica)
-//            else if(categoria == 5.0) // sismológica
-//                imgNoti.setImageResource(R.drawable.sismologica)
-//            else if(categoria == 6.0) // protección civil
-//                imgNoti.setImageResource(R.drawable.proteccion_civil)
-//            else
-//                imgNoti.setImageResource(R.drawable.defaultbackground)
         }
 
     }
