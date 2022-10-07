@@ -35,7 +35,10 @@ class ServicioMensajeFB : FirebaseMessagingService()
 
     override fun onNewToken(token: String) {
         println("Nuevo token: $token")
-        servicioAvizapanAPI.subirToken(token)
+        val map: HashMap<String, String> = HashMap()
+        map["token"] = token
+        println(map)
+        servicioAvizapanAPI.subirToken(map)
     }
 
     override fun onMessageReceived(message: RemoteMessage) {
