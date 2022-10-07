@@ -60,28 +60,28 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             //tvsubtituloNoti.text = notificacion.descripcionNoti
             fecha.text = fechaSplit[0]
             hora.text = horaSplit[0]
+
             if(categoria == 1.0) // vialidad
-                imgNoti.setImageResource(R.drawable.vialidad)
+                imgNoti.setImageResource(R.drawable.urban_design)
             else if(categoria == 2.0) // climatológica
-                imgNoti.setImageResource(R.drawable.climatologica)
+                imgNoti.setImageResource(R.drawable.weather_sunny)
             else if(categoria == 5.0) // sismológica
-                imgNoti.setImageResource(R.drawable.sismologica)
+                imgNoti.setImageResource(R.drawable.earthquake)
             else if(categoria == 6.0) // protección civil
-                imgNoti.setImageResource(R.drawable.proteccion_civil)
+                imgNoti.setImageResource(R.drawable.security)
             else
                 imgNoti.setImageResource(R.drawable.defaultbackground)
 
-
-            // Descargar la bandera desde el url y ponerla en imgBandera
-            //val url = (pais.info["flag"])
-
-            // Mostrar la imagen con Gradle
-            //Glide.with(renglonPais.context) // mandamos la vista pq todas las vistas pueden preguntar su contexto
-                //.load(url)
-                //.into(imgBandera)
-
-            // sismologica
-            // proteccion civil
+//            if(categoria == 1.0) // vialidad
+//                imgNoti.setImageResource(R.drawable.vialidad)
+//            else if(categoria == 2.0) // climatológica
+//                imgNoti.setImageResource(R.drawable.climatologica)
+//            else if(categoria == 5.0) // sismológica
+//                imgNoti.setImageResource(R.drawable.sismologica)
+//            else if(categoria == 6.0) // protección civil
+//                imgNoti.setImageResource(R.drawable.proteccion_civil)
+//            else
+//                imgNoti.setImageResource(R.drawable.defaultbackground)
         }
 
     }
