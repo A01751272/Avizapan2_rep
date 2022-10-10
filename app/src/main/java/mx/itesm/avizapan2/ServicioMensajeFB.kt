@@ -12,6 +12,9 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import mx.itesm.avizapan2.view.MainActivity
 import mx.itesm.avizapan2.view.home.AvizapanAPI
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -33,12 +36,23 @@ class ServicioMensajeFB : FirebaseMessagingService()
         retrofit.create(AvizapanAPI::class.java)
     }
 
-    override fun onNewToken(token: String) {
-        println("Nuevo token: $token")
-        val map: HashMap<String, String> = HashMap()
-        map["token"] = token
-        println(map)
-        servicioAvizapanAPI.subirToken(map)
+    override fun onNewToken(token: Token, onResult: Token) {
+//        println("Nuevo token: $token")
+//        val map: MutableMap<String, String> = mutableMapOf()
+//        map["token"] = token
+//        println(map)
+        servicioAvizapanAPI.subirToken(token).enqueue(
+            object : Callback<Token> {
+                override fun onFailure(call: Call<Token>, t: Throwable) {
+                    onResult(null)
+                }
+
+                override fun onResponse(call: Call<Token>, response: Response<Token>) {
+                    val addedToken = response.body()
+                    onResult(addedToken)
+                }
+            }
+        )
     }
 
     override fun onMessageReceived(message: RemoteMessage) {
