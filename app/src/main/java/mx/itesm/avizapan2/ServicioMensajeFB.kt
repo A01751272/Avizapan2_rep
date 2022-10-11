@@ -8,6 +8,7 @@ import android.content.Intent
 import android.os.Build
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
+import androidx.lifecycle.MutableLiveData
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import mx.itesm.avizapan2.view.MainActivity
@@ -36,20 +37,23 @@ class ServicioMensajeFB : FirebaseMessagingService()
         retrofit.create(AvizapanAPI::class.java)
     }
 
-    override fun onNewToken(token: Token, onResult: Token) {
-//        println("Nuevo token: $token")
+    override fun onNewToken(token: String) {
+        println("Nuevo token: $token")
 //        val map: MutableMap<String, String> = mutableMapOf()
 //        map["token"] = token
 //        println(map)
+        subirToken(token)
+    }
+
+    private fun subirToken(token: String) {
         servicioAvizapanAPI.subirToken(token).enqueue(
             object : Callback<Token> {
                 override fun onFailure(call: Call<Token>, t: Throwable) {
-                    onResult(null)
+                    println("No subi el Token")
                 }
 
                 override fun onResponse(call: Call<Token>, response: Response<Token>) {
-                    val addedToken = response.body()
-                    onResult(addedToken)
+                    println("Subi el Token")
                 }
             }
         )

@@ -16,6 +16,6 @@ interface AvizapanAPI
 
     @Headers("Content-Type: application/json")
     @POST("tokens")
-    fun subirToken(@Body token: Token): Call<Token>
+    fun subirToken(@Body token: String): Call<Token>
     //fun subirToken(@Body token: String): Call<String>
 }
