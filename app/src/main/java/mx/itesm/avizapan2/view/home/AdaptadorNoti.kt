@@ -12,7 +12,6 @@ import mx.itesm.avizapan2.R
 class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notificacion>)
     :  RecyclerView.Adapter<AdaptadorNoti.CajaNoti>()
 {
-
     // Variable de instancia ListenerRecycler
     var listener: ListenerRecycler? = null
 
@@ -47,16 +46,13 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             // Valores que no desplegamos en la interfaz
             val categoria = notificacion.categoriaNoti
 
-
             // Obtener fecha y hora del mismo parámetro
             val fechaCompleta = notificacion.publicado
             val fechaSplit = fechaCompleta.split('T')
             val horaSplit = fechaSplit[1].split('.')
 
-
             // Set values de todo
             tvTituloNoti.text = notificacion.tituloNoti
-            //tvsubtituloNoti.text = notificacion.descripcionNoti
             fecha.text = fechaSplit[0]
             hora.text = horaSplit[0]
 

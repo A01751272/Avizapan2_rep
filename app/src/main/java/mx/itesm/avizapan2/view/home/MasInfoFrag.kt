@@ -21,7 +21,7 @@ class MasInfoFrag : Fragment() {
     private lateinit var binding : FragmentMasInfoBinding
 
     // ViewModel
-    private val viewModel: MasInfoViewModel by viewModels()
+//    private val viewModel: MasInfoViewModel by viewModels()
 
     // Argumentos Navegacion
     private val args: MasInfoFragArgs by navArgs()
@@ -39,6 +39,9 @@ class MasInfoFrag : Fragment() {
         // Definir valores que llegan desde Home
         val titulo = args.notificacion.tituloNoti
         val descripcion = args.notificacion.descripcionNoti
+        // Cómo pasar lat y long para que el mapa despliegue un marcador en dichas coordenadas??
+        val longitud = args.notificacion.longitud
+        val latitud = args.notificacion.latitud
         val fechaCompleta = args.notificacion.publicado
 
         // Formato fecha y hora

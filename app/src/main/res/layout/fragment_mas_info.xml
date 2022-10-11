@@ -45,6 +45,7 @@
             android:id="@+id/tvTituloMasInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
             android:text="Título"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold" />
@@ -59,6 +60,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/lato"
                 android:text="Publicado el:"
                 android:textAlignment="viewEnd" />
 
@@ -67,6 +69,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/lato"
                 android:text="01/01/2022"
                 android:textAlignment="center" />
         </LinearLayout>
@@ -81,6 +84,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/lato"
                 android:text="a las:"
                 android:textAlignment="viewEnd" />
 
@@ -89,6 +93,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/lato"
                 android:text="00:00:00"
                 android:textAlignment="center" />
         </LinearLayout>
@@ -97,6 +102,7 @@
             android:id="@+id/tvDescripcionMasInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
             android:text="Descripción" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,6 +29,7 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold"
+            android:theme="@style/SpinnerTheme"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <FrameLayout

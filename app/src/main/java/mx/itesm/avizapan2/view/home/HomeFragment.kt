@@ -75,6 +75,8 @@ class HomeFragment : Fragment(), ListenerRecycler {
                         "\n" +
                         "Clustering is a computational technique that divides the points in a data set into groups. A successful clustering results in groups that contain points that are related to one another. Whether those relationships are meaningful generally requires human verification.",
                 0.0,
+                -99.2675,
+                19.5562,
                 "2022-09-27T10:25:03.000Z",
                 1.0
             ),
@@ -83,6 +85,8 @@ class HomeFragment : Fragment(), ListenerRecycler {
                 "Título2",
                 "Descripción2",
                 0.0,
+                -99.2675,
+                19.5562,
                 "2022-09-27T10:25:03.000Z",
                 1.0
             )

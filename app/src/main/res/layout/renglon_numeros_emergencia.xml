@@ -38,6 +38,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"
+            android:fontFamily="@font/lato_bold"
             android:text="NombreTel"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="20sp"
@@ -51,6 +52,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/lato"
             android:text="NumeroTel"
             android:textSize="16sp" />
     </LinearLayout>
