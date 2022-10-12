@@ -27,7 +27,7 @@ class ServicioMensajeFB : FirebaseMessagingService()
         // El objeto retrofit para instanciar el objeto que se conecta
         // a la red y accede a los servicios definidos
         Retrofit.Builder()
-            .baseUrl("http://10.48.71.181:4000/")
+            .baseUrl("https://avizapan-app-3s4eu.ondigitalocean.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
