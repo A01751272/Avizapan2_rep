@@ -1,4 +1,4 @@
-package mx.itesm.avizapan2
+package mx.itesm.avizapan2.view.home
 
 import com.google.gson.annotations.SerializedName
 

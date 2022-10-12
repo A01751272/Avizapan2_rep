@@ -47,7 +47,7 @@ class HomeViewModel : ViewModel() {
     }
 
     fun filtrarNotisActivas(category: String){
-        var categoryDouble = 0.0
+        var categoryDouble: Double
         // sacar valor de spinner, pasarlo a double y mandarlo a las funciones
         if (category == "Mostrar todo") {
             descargarNotisActivas()

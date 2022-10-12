@@ -1,4 +1,4 @@
-package mx.itesm.avizapan2
+package mx.itesm.avizapan2.view
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -8,10 +8,9 @@ import android.content.Intent
 import android.os.Build
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
-import androidx.lifecycle.MutableLiveData
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import mx.itesm.avizapan2.view.MainActivity
+import mx.itesm.avizapan2.R
 import mx.itesm.avizapan2.view.home.AvizapanAPI
 import retrofit2.Call
 import retrofit2.Callback
@@ -28,7 +27,7 @@ class ServicioMensajeFB : FirebaseMessagingService()
         // El objeto retrofit para instanciar el objeto que se conecta
         // a la red y accede a los servicios definidos
         Retrofit.Builder()
-            .baseUrl("https://avizapan-app-3s4eu.ondigitalocean.app/")
+            .baseUrl("http://10.48.71.181:4000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -47,12 +46,12 @@ class ServicioMensajeFB : FirebaseMessagingService()
 
     private fun subirToken(token: String) {
         servicioAvizapanAPI.subirToken(token).enqueue(
-            object : Callback<Token> {
-                override fun onFailure(call: Call<Token>, t: Throwable) {
-                    println("No subi el Token")
+            object : Callback<String> {
+                override fun onFailure(call: Call<String>, t: Throwable) {
+                    println("No subi el Token ${t.localizedMessage}")
                 }
 
-                override fun onResponse(call: Call<Token>, response: Response<Token>) {
+                override fun onResponse(call: Call<String>, response: Response<String>) {
                     println("Subi el Token")
                 }
             }
