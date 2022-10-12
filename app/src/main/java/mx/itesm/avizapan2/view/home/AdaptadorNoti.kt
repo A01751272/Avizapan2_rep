@@ -41,7 +41,7 @@ class AdaptadorNoti (private val contexto: Context, var arrNotis: Array<Notifica
             //val tvsubtituloNoti = vistaCaja.findViewById<TextView>(R.id.tvSubtituloNoti)
             val fecha = vistaCaja.findViewById<TextView>(R.id.tvFecha)
             val hora = vistaCaja.findViewById<TextView>(R.id.tvHora)
-            val imgNoti = vistaCaja.findViewById<ShapeableImageView>(R.id.imgNumero)
+            val imgNoti = vistaCaja.findViewById<ShapeableImageView>(R.id.imgCate)
 
             // Valores que no desplegamos en la interfaz
             val categoria = notificacion.categoriaNoti

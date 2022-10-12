@@ -55,7 +55,7 @@
             android:layout_weight="1">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgNumero"
+                android:id="@+id/imgCate"
                 android:layout_width="78dp"
                 android:layout_height="78dp"
                 android:layout_gravity="center"

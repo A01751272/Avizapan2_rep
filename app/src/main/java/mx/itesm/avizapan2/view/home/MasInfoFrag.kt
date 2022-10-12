@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.navArgs
 import com.google.android.gms.location.*
 import mx.itesm.avizapan2.BuildConfig
+import mx.itesm.avizapan2.R
 import mx.itesm.avizapan2.databinding.FragmentMasInfoBinding
 
 class MasInfoFrag : Fragment() {
@@ -63,6 +64,7 @@ class MasInfoFrag : Fragment() {
         val titulo = args.notificacion.tituloNoti
         val descripcion = args.notificacion.descripcionNoti
         val fechaCompleta = args.notificacion.publicado
+        val categoria = args.notificacion.categoriaNoti
 
         // Formato fecha y hora
         val fechaSplit = fechaCompleta.split('T')
@@ -73,6 +75,18 @@ class MasInfoFrag : Fragment() {
         binding.tvFechaMasInfo.text = fechaSplit[0]
         binding.tvHoraMasInfo.text = horaSplit[0]
         binding.tvDescripcionMasInfo.text = descripcion
+
+        // Poner imagenes de arriba
+        if(categoria == 1.0)
+            binding.imgCate.setImageResource(R.drawable.urban_design)
+        else if(categoria == 2.0)
+            binding.imgCate.setImageResource(R.drawable.weather_sunny)
+        else if(categoria == 5.0)
+            binding.imgCate.setImageResource(R.drawable.earthquake)
+        else if(categoria == 6.0)
+            binding.imgCate.setImageResource(R.drawable.security)
+        else
+            binding.imgCate.setImageResource(R.drawable.atizapan_logo)
 
         // Ubicación
         locationCallback = object : LocationCallback() {
@@ -123,7 +137,7 @@ class MasInfoFrag : Fragment() {
     // GPS
 
     private fun mostrarMapa(posicion: Location) {
-        val uri = Uri.parse("geo:${args.notificacion.latitud},${args.notificacion.longitud}")
+        val uri = Uri.parse("geo:${args.notificacion.latitud},${args.notificacion.longitud}?q=${args.notificacion.latitud},${args.notificacion.longitud}")
         val intMapa = Intent(Intent.ACTION_VIEW, uri)
         intMapa.setPackage("com.google.android.apps.maps")
         startActivity(intMapa)
