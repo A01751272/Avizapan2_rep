@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Avizapan2</string>
+    <string name="app_name">Avizapan</string>
     <string name="title_home">Notificaciones</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Contactos</string>

@@ -24,7 +24,9 @@
             android:id="@+id/tvTituloMasInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:fontFamily="@font/lato_bold"
+            android:foregroundGravity="center_vertical"
             android:text="Título"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold" />
@@ -38,8 +40,11 @@
                 android:id="@+id/textView4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lato"
+                android:foregroundGravity="center_vertical"
                 android:text="Publicado el:"
                 android:textAlignment="viewEnd" />
 
@@ -47,8 +52,11 @@
                 android:id="@+id/tvFechaMasInfo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lato"
+                android:foregroundGravity="center_vertical"
                 android:text="01/01/2022"
                 android:textAlignment="center" />
         </LinearLayout>
@@ -62,8 +70,11 @@
                 android:id="@+id/textView6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lato"
+                android:foregroundGravity="center_vertical"
                 android:text="a las:"
                 android:textAlignment="viewEnd" />
 
@@ -71,8 +82,11 @@
                 android:id="@+id/tvHoraMasInfo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lato"
+                android:foregroundGravity="center_vertical"
                 android:text="00:00:00"
                 android:textAlignment="center" />
         </LinearLayout>
@@ -81,14 +95,17 @@
             android:id="@+id/tvDescripcionMasInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
             android:fontFamily="@font/lato"
+            android:foregroundGravity="center_vertical"
             android:text="Descripción" />
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnMapa"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:src="@drawable/defaultbackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

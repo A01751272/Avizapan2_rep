@@ -43,7 +43,6 @@ class HomeFragment : Fragment(), ListenerRecycler {
 
     override fun onStart() {
         super.onStart()
-        // Action Bar
         // ViewModel
         homeViewModel.descargarNotisActivas()
         // RecyclerView
