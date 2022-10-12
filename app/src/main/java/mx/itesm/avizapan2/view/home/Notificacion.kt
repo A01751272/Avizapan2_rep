@@ -16,7 +16,7 @@ data class Notificacion(
     val longitud: Double=0.0,
     @SerializedName("notification_latitude")
     val latitud: Double=0.0,
-    @SerializedName("notification_posted_2")
+    @SerializedName("notification_posted")
     val publicado: String="2022-09-15T17:05:21.000Z",
     @SerializedName("notification_categoryId")
     val categoriaNoti: Double=0.0,
