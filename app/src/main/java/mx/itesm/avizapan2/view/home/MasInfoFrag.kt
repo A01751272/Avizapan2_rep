@@ -29,9 +29,6 @@ class MasInfoFrag : Fragment() {
     // binding
     private lateinit var binding: FragmentMasInfoBinding
 
-    // ViewModel
-//    private val viewModel: MasInfoViewModel by viewModels()
-
     // Argumentos Navegacion
     private val args: MasInfoFragArgs by navArgs()
 

@@ -38,9 +38,6 @@ class ServicioMensajeFB : FirebaseMessagingService()
 
     override fun onNewToken(token: String) {
         println("Nuevo token: $token")
-//        val map: MutableMap<String, String> = mutableMapOf()
-//        map["token"] = token
-//        println(map)
         subirToken(token)
     }
 
@@ -48,7 +45,6 @@ class ServicioMensajeFB : FirebaseMessagingService()
         servicioAvizapanAPI.subirToken(token).enqueue(
             object : Callback<String> {
                 override fun onFailure(call: Call<String>, t: Throwable) {
-                    println("No subi el Token ${t.localizedMessage}")
                 }
 
                 override fun onResponse(call: Call<String>, response: Response<String>) {

@@ -24,8 +24,6 @@ class HomeFragment : Fragment(), ListenerRecycler {
     // Adaptador
     private lateinit var adaptador: AdaptadorNoti
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -114,6 +112,7 @@ class HomeFragment : Fragment(), ListenerRecycler {
 
     // Dar click en caja de notificaciones para mostrar + info
     override fun itemClicked(position: Int){
+        // pasar valores al fragmento de más info
         val nombreNotificacion = adaptador.arrNotis[position]
         val accion = HomeFragmentDirections.actionNavigationHomeToMasInfoFrag(nombreNotificacion)
         findNavController().navigate(accion)
