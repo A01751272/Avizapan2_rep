@@ -20,11 +20,13 @@ class AdaptadorNumerosEmergencia (private val contexto: Context,
         return RenglonNumerosEmergencia(vista)
     }
 
+    // Muestra los datos en la posición (renglón) indicada
     override fun onBindViewHolder(holder: RenglonNumerosEmergencia, position: Int) {
         val numero = arrNumeros[position]
         holder.set(numero)
     }
 
+    // Cuenta la cantidad de renglones que se deben poner
     override fun getItemCount(): Int {
         return arrNumeros.size
     }

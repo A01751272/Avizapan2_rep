@@ -76,7 +76,7 @@ class MasInfoFrag : Fragment() {
         binding.tvHoraMasInfo.text = horaSplit[0]
         binding.tvDescripcionMasInfo.text = descripcion
 
-        // Poner imagenes de arriba
+        // Poner imagenes de categoría
         if(categoria == 1.0)
             binding.imgCate.setImageResource(R.drawable.urban_design)
         else if(categoria == 2.0)
@@ -100,6 +100,7 @@ class MasInfoFrag : Fragment() {
         }
     }
 
+    // Corre cuando el fragmento es visible al usuario
     override fun onStart() {
         super.onStart()
         if (!this::clienteLocalizacion.isInitialized) {
@@ -120,11 +121,6 @@ class MasInfoFrag : Fragment() {
         detenerActualizacionesPosicion()
     }
 
-    override fun onStop() {
-        super.onStop()
-        println("DETENIENDO")
-    }
-
     private fun registrarEventos() {
         binding.btnMapa.setOnClickListener {
             if(posicion != null) {
@@ -133,8 +129,6 @@ class MasInfoFrag : Fragment() {
             }
         }
     }
-
-    // GPS
 
     private fun mostrarMapa(posicion: Location) {
         val uri = Uri.parse("geo:${args.notificacion.latitud},${args.notificacion.longitud}?q=${args.notificacion.latitud},${args.notificacion.longitud}")
@@ -207,38 +201,18 @@ class MasInfoFrag : Fragment() {
                         val uri = Uri.fromParts(
                             "package",
                             BuildConfig.APPLICATION_ID, null
-                        ) // TODO: checar si es null
+                        )
                         intent.data = uri
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                         startActivity(intent)
                     })
                     .setNeutralButton("Cancelar", DialogInterface.OnClickListener { dialog, which ->
                         println("No hay forma de usar gps, cerrar la actividad")
-//Deshabilitar funcionalidad
                     })
                     .setCancelable(false)
                 dialogo.show()
             }
         }
-    }
-
-    @SuppressLint("MissingPermission")
-    private fun leerUltimaUbicacion() {
-        clienteLocalizacion = LocationServices.getFusedLocationProviderClient(requireActivity())
-        if (ActivityCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                requireContext(),
-                Manifest.permission.ACCESS_COARSE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            return
-        }
-        clienteLocalizacion.lastLocation
-            .addOnSuccessListener { location: Location? ->
-                println("Ultima ubicación: $location")
-            }
     }
 
     @SuppressLint("MissingPermission")
@@ -259,20 +233,5 @@ class MasInfoFrag : Fragment() {
     private fun detenerActualizacionesPosicion() {
         clienteLocalizacion.removeLocationUpdates(locationCallback)
     }
-
-//    override fun onSaveInstanceState(outState: Bundle, outPersistentState:
-//    PersistableBundle
-//    ) {
-//        outState?.putBoolean("ActualizandoPosicion", actualizandoPosicion)
-//        super.onSaveInstanceState(outState, outPersistentState)
-//    }
-
-    private fun recuperarActualizandoPosicion(savedInstanceState: Bundle?) {
-        savedInstanceState ?: return
-        if (savedInstanceState.containsKey("ActualizandoPosicion")) {
-            actualizandoPosicion = savedInstanceState.getBoolean("ActualizandoPosicion")
-        }
-    }
-
 
 }

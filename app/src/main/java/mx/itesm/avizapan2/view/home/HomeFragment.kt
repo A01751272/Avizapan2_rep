@@ -115,8 +115,6 @@ class HomeFragment : Fragment(), ListenerRecycler {
     // Dar click en caja de notificaciones para mostrar + info
     override fun itemClicked(position: Int){
         val nombreNotificacion = adaptador.arrNotis[position]
-        // println("Click en $nombreNotificacion")
-        // TODO: pasar argumentos desde home hasta mas info
         val accion = HomeFragmentDirections.actionNavigationHomeToMasInfoFrag(nombreNotificacion)
         findNavController().navigate(accion)
     }
