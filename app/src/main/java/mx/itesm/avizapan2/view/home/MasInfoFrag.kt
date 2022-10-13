@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.navArgs
 import com.google.android.gms.location.*
+import com.google.android.gms.location.FusedLocationProviderClient
 import mx.itesm.avizapan2.BuildConfig
 import mx.itesm.avizapan2.R
 import mx.itesm.avizapan2.databinding.FragmentMasInfoBinding
