@@ -41,32 +41,40 @@ class NotificationsFragment : Fragment() {
         // Números de emergencia conocidos
         val arrNumerosEmergencia = arrayOf(
             NumerosEmergencia(
-                "Bomberos Atizapán",
-                "55 3622 1004"
+                "Ayuntamiento de Atizapán de Zaragoza",
+                "55 3622 2800"
+            ),
+            NumerosEmergencia(
+                "Instituto de la Mujer",
+                "55 5077 3843"
+            ),
+            NumerosEmergencia(
+                "DIF Atizapán",
+                "55 2817 8518"
             ),
             NumerosEmergencia(
                 "Cruz Roja",
-                "5822 5547 / 5822 8151"
+                "55 5816 0294"
             ),
             NumerosEmergencia(
-                "Emergencias Atizapán (C4)",
-                "5366 7193"
+                "Bomberos: Estación Central",
+                "55 3622 1004"
             ),
             NumerosEmergencia(
-                "Seguridad Pública",
-                "1106 2163"
+                "Bomberos: Calacoaya",
+                "55 5565 0696"
             ),
             NumerosEmergencia(
-                "Policía Federal de Caminos",
-                "5684 2142 / 5684 9710"
+                "Bomberos: Blvd. Ignacio Zaragoza",
+                "55 5820 9282"
             ),
             NumerosEmergencia(
-                "Incendios Forestales",
-                "5554 0612 / 01 800 00 77 100"
+                "Seguridad Pública y Tránsito",
+                "55 3622 2730"
             ),
             NumerosEmergencia(
-                "Comisión de Derechos Humanos",
-                "5299 5600"
+                "SAPASA (Servicios de Agua Potable)",
+                "55 1083 6700"
             )
         )
 

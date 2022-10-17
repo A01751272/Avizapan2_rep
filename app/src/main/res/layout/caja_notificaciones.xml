@@ -30,7 +30,8 @@
                 android:singleLine="true"
                 android:text="Notif1"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textIsSelectable="true"/>
 
             <TextView
                 android:id="@+id/tvFecha"

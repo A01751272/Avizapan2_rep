@@ -47,7 +47,8 @@
             android:foregroundGravity="center_vertical"
             android:text="Título"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textIsSelectable="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -118,7 +119,8 @@
             android:fontFamily="@font/lato"
             android:foregroundGravity="center_vertical"
             android:justificationMode="inter_word"
-            android:text="Descripción" />
+            android:text="Descripción"
+            android:textIsSelectable="true"/>
     </LinearLayout>
 
     <ImageButton
