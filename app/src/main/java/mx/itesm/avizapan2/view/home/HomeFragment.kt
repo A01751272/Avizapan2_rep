@@ -63,6 +63,7 @@ class HomeFragment : Fragment(), ListenerRecycler {
     }
 
     private fun configurarRV() {
+        // Notificaciones por default en el feed
         val arrNotis = arrayOf(
             Notificacion(
                 1.0,

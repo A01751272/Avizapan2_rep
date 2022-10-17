@@ -1,4 +1,4 @@
-package mx.itesm.avizapan2.view.notifications
+package mx.itesm.avizapan2.view.numeros
 
 import android.os.Bundle
 import android.view.LayoutInflater

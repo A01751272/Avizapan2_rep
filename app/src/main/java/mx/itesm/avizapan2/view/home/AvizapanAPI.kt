@@ -6,10 +6,10 @@ import retrofit2.http.*
 
 interface AvizapanAPI
 {
-    @GET("notifications/active")
+    @GET("numeros/active")
     fun descargarNotisActivas(): Call<List<Notificacion>>
 
-    @GET("notifications/category/{category}")
+    @GET("numeros/category/{category}")
     fun filtrarNotisActivas(@Path("category") category: String): Call<List<Notificacion>>
 
     @GET("tokens/{token}")
