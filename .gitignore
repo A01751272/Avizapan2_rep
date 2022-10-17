@@ -12,3 +12,5 @@ local.properties
 /captures
 .externalNativeBuild
 .cxx
+android/local.properties
+.android/local.properties
