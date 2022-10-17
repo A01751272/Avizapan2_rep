@@ -14,3 +14,4 @@ local.properties
 .cxx
 android/local.properties
 .android/local.properties
+**/android/local.properties
