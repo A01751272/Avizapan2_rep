@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.home.HomeFragment">
+    tools:context=".view.numeros.NotificationsFragment">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -18,41 +18,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Spinner
-            android:id="@+id/spinnerFiltros"
+        <TextView
+            android:id="@+id/tvTitulo"
             android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="4"
-            android:entries="@array/arrCategoria"
+            android:fontFamily="@font/lato_bold"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Números de Emergencia"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold"
-            android:theme="@style/SpinnerTheme"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:textStyle="bold" />
 
         <FrameLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1">
 
             <ImageButton
-                android:id="@+id/btnFiltrar"
+                android:id="@+id/btnCredits"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="@drawable/round_button"
                 android:scaleType="centerInside"
-                android:src="?android:attr/actionModeWebSearchDrawable"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:src="@android:drawable/ic_menu_info_details" />
         </FrameLayout>
 
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvNotis"
+        android:id="@+id/rvNumerosEmergencia"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -62,6 +61,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

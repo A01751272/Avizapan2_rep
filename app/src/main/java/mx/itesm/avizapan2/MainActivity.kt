@@ -1,4 +1,4 @@
-package mx.itesm.avizapan2.view
+package mx.itesm.avizapan2
 
 import android.os.Bundle
 import androidx.activity.viewModels

@@ -1,11 +1,10 @@
-package mx.itesm.avizapan2.view
+package mx.itesm.avizapan2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import mx.itesm.avizapan2.R
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {

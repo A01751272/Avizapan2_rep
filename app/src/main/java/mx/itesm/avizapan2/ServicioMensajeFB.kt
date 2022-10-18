@@ -1,4 +1,4 @@
-package mx.itesm.avizapan2.view
+package mx.itesm.avizapan2
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -10,7 +10,6 @@ import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import mx.itesm.avizapan2.R
 import mx.itesm.avizapan2.view.home.AvizapanAPI
 import retrofit2.Call
 import retrofit2.Callback

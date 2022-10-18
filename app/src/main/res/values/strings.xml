@@ -4,6 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Contactos</string>
     <string name="title_mas_info">Noticia</string>
+    <string name="title_creditos">Créditos</string>
 
     <string-array name="arrCategoria">
         <item>Mostrar todo</item>
@@ -12,4 +13,5 @@
         <item>Sismos</item>
         <item>Protección Civil</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

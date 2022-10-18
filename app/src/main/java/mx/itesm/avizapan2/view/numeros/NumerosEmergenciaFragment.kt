@@ -5,14 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.avizapan2.databinding.FragmentNotificationsBinding
+import mx.itesm.avizapan2.R
+import mx.itesm.avizapan2.databinding.FragmentNumerosEmerBinding
 
 class NotificationsFragment : Fragment() {
 
     // Binding
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentNumerosEmerBinding? = null
 
     // Adaptador
     private lateinit var adaptador: AdaptadorNumerosEmergencia
@@ -24,10 +26,15 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentNumerosEmerBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        registrarEventos()
     }
 
     // Se activa cuando el fragmento es visible al usuario
@@ -35,6 +42,13 @@ class NotificationsFragment : Fragment() {
         super.onStart()
         // RecyclerView
         configurarRV()
+    }
+
+    private fun registrarEventos() {
+        binding.btnCredits.setOnClickListener {
+            // Mostrar fragmento de créditos
+            findNavController().navigate(R.id.action_navigation_notifications_to_creditosFrag)
+        }
     }
 
     private fun configurarRV() {
