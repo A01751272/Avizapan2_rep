@@ -7,7 +7,7 @@ Esta aplicación está desarrollada para dispositivos con sistema operativo Andr
 
 Para descargar esta aplicación en una computadora de escritorio o *laptop*, es necesario contar con Android Studio. Haga click [aquí](https://developer.android.com/studio).
 
-Cualquier duda referente al funcionamiento de la aplicación, favor de consultar el manual de usuario. **INSERTAR LINK MANUAL DE USUARIO**
+Cualquier duda referente al funcionamiento de la aplicación, favor de consultar el [manual de usuario](https://docs.google.com/document/d/1215SJhmFfXIIhXCbYHwC0cVoKuCDoXK3C0nceDi_Yjo/edit?usp=sharing).
 
 ## Descarga para Windows
 1. Ingresa al [repositorio en github](https://github.com/A01751272/Avizapan2_rep) en tu computadora.
@@ -20,4 +20,9 @@ Cualquier duda referente al funcionamiento de la aplicación, favor de consultar
 8. Espera a que los archivos del proyecto carguen correctamente. En la parte inferior derecha podrás consultar el estado de descarga de los archivos.
 9. En la parte superior izquierda de la pantalla encontrarás una pestaña llamada **Proyecto**, en donde se encuentran los archivos del mismo. Da click sobre la flecha a la izquierda de **Gradle Scripts**. Verás que se despliegan varios archivos de configuración.
 10. Haz doble click sobre el archivo **local.properties**, y espera a que abra.
-11. 
+11. Reemplaza la línea 8 con la siguiente línea de código: `sdk.dir=[unidad]\:\\Users\\[usuario]\\AppData\\Local\\Android\\Sdk`  
+12. Reemplaza [usuario] por el de tu computadora. Reemplaza [unidad] por *C* o *D*, dependiendo en donde hayas instalado Android Studio.
+13. Conecta tu dispositivo móvil con sistema operativo Android > 5.0 a la computadora, utilizando el cable de carga. **Nota:** Para descargar la aplicación en tu dispositivo, es necesario [activar el modo desarrollador](https://developer.android.com/studio/debug/dev-options?hl=es-419#:~:text=Si%20quieres%20habilitar%20las%20Opciones,del%20dispositivo%20%3E%20N%C3%BAmero%20de%20compilaci%C3%B3n).
+14. Espera hasta que tu dispositivo aparezca en la parte superior de la pantalla, a la izquierda del botón verde **Run app**.
+15. Una vez que la computadora haya detectado el dispositivo, corre la aplicación con el botón mencionado anteriormente. La aplicación deberá descargarse y abrirse en el dispositivo conectado.
+
