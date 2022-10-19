@@ -1,4 +1,4 @@
-package mx.itesm.avizapan2.view.numeros
+package mx.itesm.avizapan2.view.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -32,11 +32,6 @@ class NotificationsFragment : Fragment() {
         return root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        registrarEventos()
-    }
-
     // Se activa cuando el fragmento es visible al usuario
     override fun onStart() {
         super.onStart()
@@ -44,12 +39,6 @@ class NotificationsFragment : Fragment() {
         configurarRV()
     }
 
-    private fun registrarEventos() {
-        binding.btnCredits.setOnClickListener {
-            // Mostrar fragmento de créditos
-            findNavController().navigate(R.id.action_navigation_notifications_to_creditosFrag)
-        }
-    }
 
     private fun configurarRV() {
         // Números de emergencia conocidos

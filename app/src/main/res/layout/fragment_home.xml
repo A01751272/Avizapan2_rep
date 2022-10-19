@@ -38,14 +38,14 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:id="@+id/btnFiltrar"
+                android:id="@+id/btnCreditoss"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="@drawable/round_button"
                 android:scaleType="centerInside"
-                android:src="?android:attr/actionModeWebSearchDrawable"
+                android:src="@android:drawable/ic_menu_info_details"
                 tools:ignore="SpeakableTextPresentCheck" />
         </FrameLayout>
 

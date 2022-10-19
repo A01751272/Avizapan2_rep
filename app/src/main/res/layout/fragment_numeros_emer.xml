@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".view.numeros.NotificationsFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -16,39 +16,18 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/tvTitulo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="4"
-            android:fontFamily="@font/lato_bold"
-            android:foregroundGravity="center"
-            android:gravity="center"
-            android:text="Números de Emergencia"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="bold" />
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/btnCredits"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/round_button"
-                android:scaleType="centerInside"
-                android:src="@android:drawable/ic_menu_info_details" />
-        </FrameLayout>
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:fontFamily="@font/lato_bold"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Números de Emergencia"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNumerosEmergencia"
@@ -61,6 +40,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

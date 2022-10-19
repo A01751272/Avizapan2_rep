@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.numeros.CreditosFrag">
+    tools:context=".view.home.CreditosFrag">
 
     <TextView
         android:id="@+id/textView2"
@@ -59,6 +59,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/pablo"
                         tools:src="@drawable/pablo" />
 
                     <TextView
@@ -96,6 +97,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/angelito"
                         tools:src="@tools:sample/avatars" />
 
                     <TextView
@@ -142,6 +144,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/vale"
                         tools:src="@drawable/vale" />
 
                     <TextView
@@ -178,7 +181,8 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:scaleType="centerCrop"
-                        tools:src="@tools:sample/avatars" />
+                        app:srcCompat="@drawable/ale"
+                        tools:src="@drawable/ale" />
 
                     <TextView
                         android:id="@+id/textView12"
@@ -223,6 +227,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/humberto"
                         tools:src="@drawable/humberto" />
 
                     <TextView
@@ -259,6 +264,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
                         android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/pol"
                         tools:src="@tools:sample/avatars" />
 
                     <TextView

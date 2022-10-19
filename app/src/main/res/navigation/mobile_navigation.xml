@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_navigation_home_to_masInfoFrag"
             app:destination="@id/masInfoFrag" />
+        <action
+            android:id="@+id/action_navigation_home_to_creditosFrag"
+            app:destination="@id/creditosFrag" />
     </fragment>
 
     <fragment
@@ -25,11 +28,7 @@
         android:id="@+id/navigation_notifications"
         android:name="mx.itesm.avizapan2.view.numeros.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_numeros_emer" >
-        <action
-            android:id="@+id/action_navigation_notifications_to_creditosFrag"
-            app:destination="@id/creditosFrag" />
-    </fragment>
+        tools:layout="@layout/fragment_numeros_emer" />
     <fragment
         android:id="@+id/masInfoFrag"
         android:name="mx.itesm.avizapan2.view.home.MasInfoFrag"
@@ -41,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/creditosFrag"
-        android:name="mx.itesm.avizapan2.view.numeros.CreditosFrag"
+        android:name="mx.itesm.avizapan2.view.home.CreditosFrag"
         android:label="@string/title_creditos"
         tools:layout="@layout/fragment_creditos" />
 </navigation>
