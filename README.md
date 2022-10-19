@@ -1,7 +1,7 @@
 # Guía de descarga Avizapán
 ## Especificaciones
 **Grupo 401 - Equipo 4**  
-Este proyecto fue desarrollado utilizando el IDE [Android Studio Chipmunk | 2021.2.1 Patch 2](https://androidstudio.googleblog.com/2022/08/android-studio-chipmunk-202121-patch-2.html) y el lenguaje de programación [Kotlin 1.6.10](https://kotlinlang.org/docs/whatsnew16.html). En este archivo se encuentran los pasos a seguir para realizar la descargar de la aplicación Avizapán en dichas versiones.  
+Este proyecto fue desarrollado utilizando el IDE [Android Studio Chipmunk | 2021.2.1 Patch 2](https://androidstudio.googleblog.com/2022/08/android-studio-chipmunk-202121-patch-2.html) y el lenguaje de programación [Kotlin 1.6.10](https://kotlinlang.org/docs/whatsnew16.html). En este archivo se encuentran los pasos a seguir para realizar la descarga de la aplicación Avizapán en dichas versiones.  
 
 Esta aplicación está desarrollada para dispositivos con sistema operativo Android, mayor o igual al 5.0. Para determinar la versión de Android de su dispositivo, haga click [aquí](https://support.google.com/android/answer/7680439?hl=es-419).  
 
