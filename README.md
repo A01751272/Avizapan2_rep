@@ -20,4 +20,9 @@ Cualquier duda referente al funcionamiento de la aplicación, favor de consultar
 8. Espera a que los archivos del proyecto carguen correctamente. En la parte inferior derecha podrás consultar el estado de descarga de los archivos.
 9. En la parte superior izquierda de la pantalla encontrarás una pestaña llamada **Proyecto**, en donde se encuentran los archivos del mismo. Da click sobre la flecha a la izquierda de **Gradle Scripts**. Verás que se despliegan varios archivos de configuración.
 10. Haz doble click sobre el archivo **local.properties**, y espera a que abra.
-11. 
+11. Reemplaza la línea 8 con la siguiente línea de código: `sdk.dir=D\:\\Users\\aleny\\AppData\\Local\\Android\\Sdk`  
+12. Reemplaza el nombre de usuario *aleny* por el de tu computadora. Si es necesario, cambia el disco *D* por *C* o la unidad en donde hayas instalado Android Studio.
+13. Conecta tu dispositivo móvil con sistema operativo Android > 5.0 a la computadora, utilizando el cable de carga. **Nota:** Para descargar la aplicación en tu dispositivo, es necesario [activar el modo desarrollador](https://developer.android.com/studio/debug/dev-options?hl=es-419#:~:text=Si%20quieres%20habilitar%20las%20Opciones,del%20dispositivo%20%3E%20N%C3%BAmero%20de%20compilaci%C3%B3n).
+14. Espera hasta que tu dispositivo aparezca en la parte superior de la pantalla, a la izquierda del botón verde **Run app**.
+15. Una vez que la computadora haya detectado el dispositivo, corre la aplicación con el botón mencionado anteriormente. La aplicación deberá descargarse y abrirse en el dispositivo conectado.
+
