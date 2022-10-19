@@ -58,7 +58,8 @@
                         android:layout_height="128dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
-                        tools:src="@tools:sample/avatars" />
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/pablo" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -94,6 +95,7 @@
                         android:layout_height="128dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
+                        android:scaleType="centerCrop"
                         tools:src="@tools:sample/avatars" />
 
                     <TextView
@@ -139,7 +141,8 @@
                         android:layout_height="128dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
-                        tools:src="@tools:sample/avatars" />
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/vale" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -174,6 +177,7 @@
                         android:layout_height="128dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
+                        android:scaleType="centerCrop"
                         tools:src="@tools:sample/avatars" />
 
                     <TextView
@@ -218,7 +222,8 @@
                         android:layout_height="128dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
-                        tools:src="@tools:sample/avatars" />
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/humberto" />
 
                     <TextView
                         android:id="@+id/textView14"
@@ -253,6 +258,7 @@
                         android:layout_height="128dp"
                         android:layout_gravity="center"
                         android:layout_marginBottom="4dp"
+                        android:scaleType="centerCrop"
                         tools:src="@tools:sample/avatars" />
 
                     <TextView
