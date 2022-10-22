@@ -7,7 +7,7 @@ Esta aplicación está desarrollada para dispositivos con sistema operativo Andr
 
 Para descargar esta aplicación en una computadora de escritorio o *laptop*, es necesario contar con Android Studio. Haga click [aquí](https://developer.android.com/studio).
 
-Cualquier duda referente al funcionamiento de la aplicación, favor de consultar el [manual de usuario](https://docs.google.com/document/d/1215SJhmFfXIIhXCbYHwC0cVoKuCDoXK3C0nceDi_Yjo/edit?usp=sharing).
+Cualquier duda referente al funcionamiento de la aplicación, favor de consultar el [manual de usuario](https://docs.google.com/presentation/d/1C-_D4tdvXKTrwFN7aKiA2XmHQJuNd4JwOWqlv-QIPps/edit?usp=sharing).
 
 ## Descarga para Windows
 1. Ingresa al [repositorio en github](https://github.com/A01751272/Avizapan2_rep) en tu computadora.
